@@ -99,6 +99,7 @@ section.block + section.block { border-top: 1px solid var(--border); }
 .section-head h2 + p { margin-top: 16px; }
 
 .mission { text-align: center; }
+.mission-sub { max-width: 760px; margin: 26px auto 0; font-style: italic; font-size: clamp(19px, 2.4vw, 24px); color: var(--text-dim); }
 .mission blockquote { margin: 0 auto; max-width: 860px; font-family: var(--head); font-weight: 700; font-size: clamp(28px, 4.4vw, 42px); line-height: 1.15; text-transform: none; }
 
 /* Feature grid */
