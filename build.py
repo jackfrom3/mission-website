@@ -326,7 +326,7 @@ def build_how():
 def build_about():
     body = f"""
 <section class="hero" style="min-height:min(70vh,620px)">
-  <img src="img/outdoor-jack-walking.jpg" alt="Coach Jack Anderson smiling while walking with an athlete">
+  <img src="img/outdoor-jack-walking.jpg" alt="Coach Jack Anderson smiling while walking with an athlete" style="object-position:center 8%">
   <div class="wrap">
     <p class="eyebrow">About</p>
     <h1>Jack Anderson, MS, CSCS</h1>
