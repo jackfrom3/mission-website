@@ -104,7 +104,7 @@ def page(path, title, description, body, depth=0, og_image="assets/og.jpg"):
     <div class="cols">
       <div>
         <img src="{up}img/logo.svg" alt="{SITE_NAME}">
-        <p>Strength and performance training for youth athletes in Santa Barbara.</p>
+        <p>Youth athlete strength and performance training, education and mentorship in Santa Barbara, California.</p>
       </div>
       <div>
         <h4>Visit</h4>
