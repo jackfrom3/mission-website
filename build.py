@@ -365,7 +365,7 @@ def build_about():
     <div class="section-head"><p class="eyebrow">What We Stand For</p><h2>Mission values</h2></div>
     <div class="grid two">
       <div class="card"><div class="pad"><h3>Holistic Development</h3><p>Growing athletes physically, mentally, emotionally and socially, not just on the field.</p></div></div>
-      <div class="card"><div class="pad"><h3>Effort / Attitude</h3><p>Showing up ready to work every session, bringing energy, and competing with yourself and your teammates.</p></div></div>
+      <div class="card"><div class="pad"><h3>Effort / Attitude</h3><p>The way athletes carry themselves matters. Show up ready to work every session, bring energy, compete with yourself and your teammates. These small habits build a greater potential for greatness.</p></div></div>
       <div class="card"><div class="pad"><h3>Coachability</h3><p>The athlete-coach relationship is critical to success. The athletes who improve fastest are the ones most open to coaching. Listen, ask questions and apply feedback.</p></div></div>
       <div class="card"><div class="pad"><h3>Ownership</h3><p>Athletes who take accountability of their own process are far more likely to succeed in sports and in life.</p></div></div></div>
     </div>
