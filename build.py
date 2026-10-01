@@ -169,10 +169,10 @@ def build_home():
             schools.append(school)
     school_tags = "".join(f"<span>{esc(s)}</span>" for s in schools)
     body = f"""
-<section class="hero">
+<section class="hero home">
   <img src="img/gym-squat-logo.jpg" alt="Athlete squatting in a Mission Performance shirt">
   <div class="wrap">
-    <p class="eyebrow">Santa Barbara, CA</p>
+    <p class="eyebrow">Mission Performance SB · Santa Barbara</p>
     <h1>Train with purpose.</h1>
     <p class="lede">Strength and performance training for youth athletes: small groups, individual programs, and real measurement of progress.</p>
     <div class="btn-row">
