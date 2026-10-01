@@ -172,7 +172,7 @@ def build_home():
 <section class="hero home">
   <img src="img/gym-squat-logo.jpg" alt="Athlete squatting in a Mission Performance shirt">
   <div class="wrap">
-    <h1>Mission Performance</h1>
+    <h1>Mission Performance SB</h1>
     <p class="lede">Youth athlete strength and performance training, education and mentorship in Santa Barbara, California.</p>
     <div class="btn-row">
       <a class="btn" href="consult.html">Request a Consult</a>
