@@ -196,7 +196,7 @@ def build_home():
       <h2>What training looks like</h2>
     </div>
     <div class="grid two">
-      <div class="card"><img src="img/gym-coaching-jump.jpg" alt="Coach cueing an athlete through a jump" loading="lazy"><div class="pad"><h3>Small groups</h3><p>Sessions run with 2–6 athletes, so every rep gets coached. Athletes get the energy of a group with the attention of private training.</p></div></div>
+      <div class="card"><img src="img/gym-coaching-jump.jpg" alt="Coach cueing an athlete through a jump" loading="lazy"><div class="pad"><h3>Small groups</h3><p>Sessions run with 2–7 athletes, so every rep gets coached. Athletes get the energy of a group with the attention of private training.</p></div></div>
       <div class="card"><img src="img/gym-db-bench.jpg" alt="Athlete pressing dumbbells on a bench" loading="lazy"><div class="pad"><h3>Your own program</h3><p>No group templates. Every athlete has an individualized program built around their sport, season, history and goals, delivered straight to their phone.</p></div></div>
       <div class="card"><img src="img/outdoor-timing-gates.jpg" alt="Athlete sprinting through timing gates" loading="lazy"><div class="pad"><h3>Measured progress</h3><p>Force plates, timing gates and regular testing show exactly where an athlete is improving and where they need work. No guessing.</p></div></div>
       <div class="card"><img src="img/outdoor-demo.jpg" alt="Coach demonstrating a drill to a group of athletes" loading="lazy"><div class="pad"><h3>The whole athlete</h3><p>Sleep, nutrition, recovery and workload all matter as much as the weight room. We coach all of it, from the fueling station to the monthly Speaker Series.</p></div></div>
@@ -268,7 +268,7 @@ def build_how():
       <li><div><h3>The consultation</h3><p>Athlete and parent meet with Jack together. We talk through the athlete's sports journey, injury history, strengths and weaknesses, life outside of sports, goals, and daily habits like sleep and nutrition. Then we walk you through exactly how the program works and answer every question.</p></div></li>
       <li><div><h3>Assessment</h3><p>Every athlete starts with a movement screen, including hip mobility, and baseline testing on force plates. Assessment doesn't stop there. We keep learning about each athlete through their first weeks of training.</p></div></li>
       <li><div><h3>An individualized program</h3><p>Each athlete gets their own program built around their sport, position, training age and goals. It lives in an app on their phone, so they always know what they're doing and why.</p></div></li>
-      <li><div><h3>Train in small groups</h3><p>Sessions run 60–90 minutes with 2–6 athletes. Athletes book their own sessions each week from our group times. Most train twice a week, year-round.</p></div></li>
+      <li><div><h3>Train in small groups</h3><p>Sessions run 60–90 minutes with 2–7 athletes. Athletes book their own sessions each week from our group times. Most train twice a week, year-round.</p></div></li>
       <li><div><h3>Test, report, adjust</h3><p>Athletes retest on force plates and get a performance report showing their progress. Programs adjust through the year, including in-season, when volume comes down but strength work continues.</p></div></li>
     </ol>
   </div>
