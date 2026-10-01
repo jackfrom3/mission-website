@@ -367,7 +367,7 @@ def build_about():
       <div class="card"><div class="pad"><h3>Holistic Development</h3><p>Growing athletes physically, mentally, emotionally and socially, not just on the field.</p></div></div>
       <div class="card"><div class="pad"><h3>Effort / Attitude</h3><p>Showing up ready to work every session, bringing energy, and competing with yourself and your teammates.</p></div></div>
       <div class="card"><div class="pad"><h3>Coachability</h3><p>Listening, asking questions and applying feedback. The athletes who improve fastest are the ones most open to coaching.</p></div></div>
-      <div class="card"><div class="pad"><h3>Ownership</h3><p>Athletes who take ownership of their own process are far more likely to succeed in sports and in life.</p></div></div></div>
+      <div class="card"><div class="pad"><h3>Ownership</h3><p>Athletes who take accountability of their own process are far more likely to succeed in sports and in life.</p></div></div></div>
     </div>
   </div>
 </section>
