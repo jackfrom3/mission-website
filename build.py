@@ -338,10 +338,10 @@ def build_about():
   <div class="wrap">
     <div class="split">
       <div>
-        <p>I've loved sports for as long as I can remember. That started as a three-year-old NFL fan and carried through playing youth sports, writing about sports, and eventually coaching them.</p>
-        <p>Before coaching, I worked in sports media as a credentialed NFL reporter and produced content for SiriusXM. Competitive powerlifting pulled me toward strength and conditioning, and I went on to earn a Master's in Exercise Science and become a Certified Strength and Conditioning Specialist (CSCS).</p>
-        <p>Since then I've coached in professional and college settings, including the San Jose Sharks, the Buffalo Bills, Canisius, the University at Buffalo and the University of Mary Washington, and privately trained professional athletes from the NHL, NBA, MLB, MLS and AVP.</p>
-        <p>Of everything I've done, coaching youth athletes here in Santa Barbara has been the most fulfilling. I started Mission Performance in 2024 because I believe young athletes deserve better guidance than most of them get: training that's built for them, and real education about sleep, nutrition, recovery and how to navigate youth sports.</p>
+        <p>I've loved sports for as long as I can remember. That started as a three-year-old NFL fan and carried through playing youth sports, and then spending years in and around professional sport.</p>
+        <p>Before coaching, I worked in sports media as a credentialed NFL reporter and radio producer for SiriusXM. Competitive powerlifting pulled me toward strength and conditioning, and I went on to earn a Master's in Exercise Science and become a Certified Strength and Conditioning Specialist (CSCS).</p>
+        <p>Since then I've coached in professional and college settings, including the San Jose Sharks, the Buffalo Bills, Canisius University, the University at Buffalo and the University of Mary Washington. I also privately trained professional athletes from the NHL, NBA, MLB, MLS and AVP.</p>
+        <p>Of everything I've done, coaching youth athletes here in Santa Barbara has been the most fulfilling. I started Mission Performance in 2024 because I believe young athletes deserve better guidance than most of them get: training that's built for them, and real education about sleep, nutrition, recovery and how to navigate the world of sports.</p>
       </div>
       <img src="img/jack-headshot.jpg" alt="Headshot of Jack Anderson" style="aspect-ratio:4/5" loading="lazy">
     </div>
