@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where Our Athletes Go | Mission Performance SB</title>
+<meta name="description" content="Mission Performance SB athletes now competing in college, from Michigan and USC to Pepperdine, Cal Poly and Westmont.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Where Our Athletes Go | Mission Performance SB">
+<meta property="og:description" content="Mission Performance SB athletes now competing in college, from Michigan and USC to Pepperdine, Cal Poly and Westmont.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c0c0d">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Mission Performance SB home"><img src="img/logo.svg" alt="Mission Performance SB"></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=document.querySelector('.nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav"><a href="how-it-works.html">How It Works</a><a href="about.html">About</a><a href="athletes.html" aria-current="page">Where Our Athletes Go</a><a href="newsletter/">Newsletter</a><a class="btn" href="consult.html">Request a Consult</a></nav>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Results</p>
+    <h1>Where our athletes go</h1>
+    <p class="lede">Mission athletes now competing in college, across every level and a range of sports.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="wrap">
+    <div class="athletes"><div class="athlete"><div class="school">Michigan</div><div class="sport">Baseball</div><div class="name">Quinn Melton</div></div><div class="athlete"><div class="school">USC</div><div class="sport">Track &amp; Field</div><div class="name">Emmett Mack</div></div><div class="athlete"><div class="school">Pepperdine</div><div class="sport">Beach Volleyball</div><div class="name">Sonia Mancuso</div></div><div class="athlete"><div class="school">Pepperdine</div><div class="sport">Baseball</div><div class="name">Griffin Arnold</div></div><div class="athlete"><div class="school">Cal Poly</div><div class="sport">Soccer</div><div class="name">Brooks Firestone</div></div><div class="athlete"><div class="school">UC Davis</div><div class="sport">Soccer</div><div class="name">Cason Goodman</div></div><div class="athlete"><div class="school">UC San Diego</div><div class="sport">Soccer</div><div class="name">Kelham Wolf</div></div><div class="athlete"><div class="school">Iona</div><div class="sport">Golf</div><div class="name">Paddy Blinderman</div></div><div class="athlete"><div class="school">Claremont-Mudd-Scripps</div><div class="sport">Football</div><div class="name">Logan Reed</div></div><div class="athlete"><div class="school">Westmont</div><div class="sport">Soccer</div><div class="name">Bear Goodman</div></div><div class="athlete"><div class="school">Westmont</div><div class="sport">Soccer</div><div class="name">Gizela Zermeno</div></div><div class="athlete"><div class="school">SBCC</div><div class="sport">Baseball</div><div class="name">Parker Hellekson</div></div></div>
+  </div>
+</section>
+
+<section class="block cta">
+  <div class="wrap">
+    <h2>Ready to get started?</h2>
+    <p class="lede">Every athlete starts with a consultation: athlete and parent, together. Tell us a little about your athlete and we'll reach out to set it up.</p>
+    <div class="btn-row"><a class="btn" href="consult.html">Request a Consult</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="img/logo.svg" alt="Mission Performance SB">
+        <p>Strength and performance training for youth athletes in Santa Barbara.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>135 E Carrillo St<br>Santa Barbara, CA 93101</p>
+        <ul><li>Monday – Friday: 3:00 – 8:30 PM</li><li>Saturday: 11:30 AM</li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:jack@missionperformsb.com">jack@missionperformsb.com</a></li>
+          <li><a href="https://www.instagram.com/missionperformsb" target="_blank" rel="noopener">Instagram @missionperformsb</a></li>
+          <li><a href="consult.html">Request a Consult</a></li>
+          <li><a href="newsletter/">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 Mission Performance SB LLC</p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('form[data-web3]').forEach(function (f) {
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var s = f.querySelector('.form-status'), b = f.querySelector('button[type=submit]');
+    b.disabled = true; s.className = 'form-status show'; s.textContent = 'Sending…';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(f) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d.success) throw new Error(d.message);
+        s.className = 'form-status show ok'; s.textContent = f.dataset.ok; f.reset();
+      })
+      .catch(function () {
+        s.textContent = 'Something went wrong. Please email jack@missionperformsb.com instead.';
+      })
+      .finally(function () { b.disabled = false; });
+  });
+});
+</script>
+</body>
+</html>
