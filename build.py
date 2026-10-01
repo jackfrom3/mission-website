@@ -24,7 +24,7 @@ EMAIL = "jack@missionperformsb.com"
 INSTAGRAM = "https://www.instagram.com/missionperformsb"
 ADDRESS = "135 E Carrillo St, Santa Barbara, CA 93101"
 # Group training start times (confirmed 2026-09-09)
-HOURS = [("Monday – Thursday", "3:00, 4:30 & 6:00 PM"), ("Friday", "3:00 & 4:30 PM"), ("Saturday", "11:00 AM – 2:00 PM")]
+HOURS = [("Monday – Thursday", "3:00, 4:30 & 6:00 PM"), ("Friday", "3:00 & 4:30 PM"), ("Saturday", "11:30 AM")]
 
 NAV = [
     ("how-it-works.html", "How It Works"),
