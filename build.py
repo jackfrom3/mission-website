@@ -353,7 +353,7 @@ def build_about():
     <div class="section-head"><p class="eyebrow">Experience</p><h2>Where I've coached</h2></div>
     <div class="info">
       <div><h3>Professional</h3><p>San Jose Sharks<br>Buffalo Bills</p></div>
-      <div><h3>College</h3><p>Canisius<br>University at Buffalo<br>University of Mary Washington</p></div>
+      <div><h3>College</h3><p>Canisius University<br>University at Buffalo<br>University of Mary Washington</p></div>
       <div><h3>Private Clients</h3><p>Athletes from the NHL, NBA, MLB, MLS and AVP</p></div>
       <div><h3>Credentials</h3><p>MS, Exercise Science<br>CSCS, NSCA</p></div>
     </div>
