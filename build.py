@@ -199,7 +199,7 @@ def build_home():
       <div class="card"><img src="img/gym-coaching-jump.jpg" alt="Coach cueing an athlete through a jump" loading="lazy"><div class="pad"><h3>Small groups</h3><p>Sessions run with 2–7 athletes. Athletes get the energy of a group with the attention of private training.</p></div></div>
       <div class="card"><img src="img/gym-db-bench.jpg" alt="Athlete pressing dumbbells on a bench" loading="lazy"><div class="pad"><h3>Your own program</h3><p>Every athlete has a program built around their sport, season, history and goals, delivered straight to their phone.</p></div></div>
       <div class="card"><img src="img/outdoor-timing-gates.jpg" alt="Athlete sprinting through timing gates" loading="lazy"><div class="pad"><h3>Measured progress</h3><p>Force plates, timing gates and regular testing show exactly where an athlete is improving and where they need work. No guessing.</p></div></div>
-      <div class="card"><img src="img/outdoor-demo.jpg" alt="Coach demonstrating a drill to a group of athletes" loading="lazy"><div class="pad"><h3>The whole athlete</h3><p>Sleep, nutrition, recovery and workload all matter as much as the weight room. We coach all of it, from the fueling station to the monthly Speaker Series.</p></div></div>
+      <div class="card"><img src="img/outdoor-demo.jpg" alt="Coach demonstrating a drill to a group of athletes" loading="lazy"><div class="pad"><h3>The whole athlete</h3><p>Sleep, nutrition, recovery and workload all matter as much as the weight room. From a fueling station for athletes to monthly educational speakers coming to speak to athletes — we cover all of it.</p></div></div>
     </div>
   </div>
 </section>
