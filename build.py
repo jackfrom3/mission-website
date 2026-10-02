@@ -287,7 +287,7 @@ def build_how():
 <section class="block">
   <div class="wrap narrow">
     <ol class="steps">
-      <li><div><h3>Request a consult</h3><p>Fill out the short form with some information about your athlete. Jack will reach out personally to set up a time.</p></div></li>
+      <li><div><h3>Request a consult</h3><p>Fill out the <a href="consult.html">short form</a> with some information about your athlete. Jack will reach out personally to set up a time.</p></div></li>
       <li><div><h3>The consultation</h3><p>Athlete and parent meet with Jack together. We talk through the athlete's sports journey, injury history, strengths and weaknesses, life outside of sports, goals, and daily habits like sleep and nutrition. Then we walk you through exactly how the program works and answer every question.</p></div></li>
       <li><div><h3>Assessment</h3><p>Every athlete starts with a movement screen, including hip mobility, and baseline testing on force plates. Assessment doesn't stop there. We keep learning about each athlete through their first weeks of training.</p></div></li>
       <li><div><h3>An individualized program</h3><p>Each athlete gets their own program built around their sport, position, training age and goals. It lives in an app on their phone, so they always know what they're doing and why.</p></div></li>
