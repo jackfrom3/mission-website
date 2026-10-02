@@ -127,6 +127,25 @@ document.querySelectorAll('form[data-web3]').forEach(function (f) {
       .finally(function () { b.disabled = false; });
   });
 });
+document.querySelectorAll('form[data-kit]').forEach(function (f) {
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var s = f.querySelector('.form-status'), b = f.querySelector('button[type=submit]');
+    b.disabled = true; s.className = 'form-status show'; s.textContent = 'Sending…';
+    fetch('https://app.kit.com/forms/9992033/subscriptions', {
+      method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(f)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.status !== 'success') throw new Error(d.status);
+        s.className = 'form-status show ok'; s.textContent = f.dataset.ok; f.reset();
+      })
+      .catch(function () {
+        s.textContent = 'Something went wrong. Please email jack@missionperformsb.com instead.';
+      })
+      .finally(function () { b.disabled = false; });
+  });
+});
 </script>
 </body>
 </html>

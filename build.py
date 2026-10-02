@@ -18,6 +18,8 @@ TESTING = True
 # Free form handler that emails submissions to jack@missionperformsb.com.
 # Get a key at https://web3forms.com (enter the email, the key arrives by email).
 WEB3FORMS_KEY = "e4a65e07-e08a-4df2-a0c6-ff1ba3f78b0d"
+# Kit (kit.com) form that newsletter signups go into.
+KIT_FORM_ID = "9992033"
 
 SITE_NAME = "Mission Performance SB"
 EMAIL = "jack@missionperformsb.com"
@@ -134,6 +136,25 @@ document.querySelectorAll('form[data-web3]').forEach(function (f) {{
       .then(function (r) {{ return r.json(); }})
       .then(function (d) {{
         if (!d.success) throw new Error(d.message);
+        s.className = 'form-status show ok'; s.textContent = f.dataset.ok; f.reset();
+      }})
+      .catch(function () {{
+        s.textContent = 'Something went wrong. Please email {EMAIL} instead.';
+      }})
+      .finally(function () {{ b.disabled = false; }});
+  }});
+}});
+document.querySelectorAll('form[data-kit]').forEach(function (f) {{
+  f.addEventListener('submit', function (e) {{
+    e.preventDefault();
+    var s = f.querySelector('.form-status'), b = f.querySelector('button[type=submit]');
+    b.disabled = true; s.className = 'form-status show'; s.textContent = 'Sending…';
+    fetch('https://app.kit.com/forms/{KIT_FORM_ID}/subscriptions', {{
+      method: 'POST', headers: {{ 'Accept': 'application/json' }}, body: new FormData(f)
+    }})
+      .then(function (r) {{ return r.json(); }})
+      .then(function (d) {{
+        if (d.status !== 'success') throw new Error(d.status);
         s.className = 'form-status show ok'; s.textContent = f.dataset.ok; f.reset();
       }})
       .catch(function () {{
@@ -407,11 +428,8 @@ def signup_box(up=""):
 <div class="signup">
   <h3>Get the newsletter</h3>
   <p class="dim" style="margin:8px 0 0">Training, nutrition, sleep and recruiting advice for athletes and parents, sent to your inbox.</p>
-  <form data-web3 data-ok="You're on the list. Thanks for subscribing!">
-    <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
-    <input type="hidden" name="subject" value="New newsletter signup">
-    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-    <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+  <form data-kit data-ok="You're on the list. Thanks for subscribing!">
+    <input type="email" name="email_address" placeholder="Email address" aria-label="Email address" required>
     <button class="btn" type="submit">Subscribe</button>
     <div class="form-status" role="status" style="flex-basis:100%"></div>
   </form>
