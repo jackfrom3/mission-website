@@ -13,7 +13,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # While the site is at the GitHub test address, keep it out of Google.
 # Flip to False when the real domain points here.
-TESTING = True
+TESTING = False
 
 # Free form handler that emails submissions to jack@missionperformsb.com.
 # Get a key at https://web3forms.com (enter the email, the key arrives by email).
@@ -22,7 +22,7 @@ WEB3FORMS_KEY = "e4a65e07-e08a-4df2-a0c6-ff1ba3f78b0d"
 KIT_FORM_ID = "9992033"
 
 # Public address of the site. Change to https://missionperformsb.com/ at domain launch.
-SITE_URL = "https://jackfrom3.github.io/mission-website/"
+SITE_URL = "https://missionperformsb.com/"
 SITE_NAME = "Mission Performance SB"
 EMAIL = "jack@missionperformsb.com"
 INSTAGRAM = "https://www.instagram.com/missionperformsb"
