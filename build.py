@@ -4,6 +4,7 @@ Edit page content below, then run:  python3 build.py
 Every page shares the same head, header and footer, so a change to the nav,
 address or hours only needs to be made once here.
 """
+import hashlib
 import html
 import json
 import os
@@ -24,6 +25,8 @@ KIT_FORM_ID = "9992033"
 # Public address of the site. Change to https://missionperformsb.com/ at domain launch.
 SITE_URL = "https://missionperformsb.com/"
 SITE_NAME = "Mission Performance SB"
+# Changes whenever site.css changes, so browsers fetch the new styles instead of a cached copy.
+CSS_VERSION = hashlib.md5(open(os.path.join(ROOT, "assets", "site.css"), "rb").read()).hexdigest()[:8]
 EMAIL = "jack@missionperformsb.com"
 INSTAGRAM = "https://www.instagram.com/missionperformsb"
 ADDRESS = "135 E Carrillo St, Santa Barbara, CA 93101"
@@ -89,7 +92,7 @@ def page(path, title, description, body, depth=0, og_image="assets/og.jpg"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}assets/site.css">
+<link rel="stylesheet" href="{up}assets/site.css?v={CSS_VERSION}">
 </head>
 <body>
 <header class="site-header">
