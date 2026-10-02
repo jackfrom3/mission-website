@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from build import ROOT, SITE_URL, SITE_NAME, ADDRESS  # noqa: E402
 
 API = "https://api.kit.com/v4"
-TEST_TAG_ID = 24221697  # "Test send (Jack only)" -> jackryanandersoniii@gmail.com
+TEST_TAG_ID = 24221697  # Kit tag "Test send (Jack only)"
 
 
 def kit(method, path, body=None):
