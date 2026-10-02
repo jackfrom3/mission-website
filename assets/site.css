@@ -89,7 +89,7 @@ p { margin: 0 0 1em; }
 .hero .wrap { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 64px; width: 100%; }
 .hero .lede { color: rgba(255,255,255,0.85); margin-top: 18px; }
 .page-hero { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
-.page-hero .lede { margin-top: 18px; }
+.page-hero .lede { margin-top: 18px; max-width: none; }
 
 /* Sections */
 section.block { padding: 84px 0; }
