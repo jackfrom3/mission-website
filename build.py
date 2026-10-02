@@ -62,7 +62,7 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
-def page(path, title, description, body, depth=0, og_image="assets/og-squat.jpg"):
+def page(path, title, description, body, depth=0, og_image="assets/og-squat-logo.jpg"):
     """Wrap page body in the shared head/header/footer and write it to path."""
     up = "../" * depth
     current = path.replace("index.html", "")
