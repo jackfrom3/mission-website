@@ -62,7 +62,7 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
-def page(path, title, description, body, depth=0, og_image="assets/og.jpg"):
+def page(path, title, description, body, depth=0, og_image="assets/og-squat.jpg"):
     """Wrap page body in the shared head/header/footer and write it to path."""
     up = "../" * depth
     current = path.replace("index.html", "")
@@ -83,7 +83,7 @@ def page(path, title, description, body, depth=0, og_image="assets/og.jpg"):
 {robots}
 <meta property="og:title" content="{esc(full_title)}">
 <meta property="og:description" content="{esc(description)}">
-<meta property="og:image" content="{up}{og_image}">
+<meta property="og:image" content="{SITE_URL}{og_image}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0c0c0d">
