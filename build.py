@@ -21,6 +21,8 @@ WEB3FORMS_KEY = "e4a65e07-e08a-4df2-a0c6-ff1ba3f78b0d"
 # Kit (kit.com) form that newsletter signups go into.
 KIT_FORM_ID = "9992033"
 
+# Public address of the site. Change to https://missionperformsb.com/ at domain launch.
+SITE_URL = "https://jackfrom3.github.io/mission-website/"
 SITE_NAME = "Mission Performance SB"
 EMAIL = "jack@missionperformsb.com"
 INSTAGRAM = "https://www.instagram.com/missionperformsb"
