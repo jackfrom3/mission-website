@@ -308,7 +308,7 @@ def build_how():
         <ul class="list">
           <li>Less volume, but intensity stays high enough to hold onto strength</li>
           <li>Less sprinting, jumping and high-impact work</li>
-          <li>More mobility, arm care and injury-prevention work</li>
+          <li>More mobility and arm care</li>
           <li>Constant communication about how the athlete is feeling</li>
         </ul>
       </div>
