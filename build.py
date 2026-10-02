@@ -17,7 +17,7 @@ TESTING = True
 
 # Free form handler that emails submissions to jack@missionperformsb.com.
 # Get a key at https://web3forms.com (enter the email, the key arrives by email).
-WEB3FORMS_KEY = "YOUR_WEB3FORMS_KEY"
+WEB3FORMS_KEY = "e4a65e07-e08a-4df2-a0c6-ff1ba3f78b0d"
 
 SITE_NAME = "Mission Performance SB"
 EMAIL = "jack@missionperformsb.com"
