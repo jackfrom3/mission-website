@@ -45,6 +45,7 @@ ATHLETES = [
     ("Quinn Melton", "Michigan", "Baseball"),
     ("Emmett Mack", "USC", "Track & Field"),
     ("Sonia Mancuso", "Pepperdine", "Beach Volleyball"),
+    ("Griffin Arnold", "Pepperdine", "Baseball"),
     ("Brooks Firestone", "Cal Poly", "Soccer"),
     ("Cason Goodman", "UC Davis", "Soccer"),
     ("Kelham Wolf", "UC San Diego", "Soccer"),
