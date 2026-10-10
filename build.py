@@ -353,7 +353,7 @@ def build_how():
 def build_about():
     body = f"""
 <section class="hero">
-  <img src="img/outdoor-jack-logo.jpg" alt="Coach Jack Anderson from behind in a black Mission Performance shirt" style="object-position:center 20%">
+  <img src="img/outdoor-jack-logo.jpg" alt="Jack Anderson from behind in a black Mission Performance shirt" style="object-position:center 20%">
   <div class="wrap">
     <p class="eyebrow">About</p>
     <h1>Jack Anderson, MS, CSCS</h1>
