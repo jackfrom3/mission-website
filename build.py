@@ -111,7 +111,7 @@ def page(path, title, description, body, depth=0, og_image="assets/og-squat-logo
     <div class="cols">
       <div>
         <img src="{up}img/logo.svg" alt="{SITE_NAME}">
-        <p>Youth athlete strength and performance training, education and mentorship in Santa Barbara, California.</p>
+        <p>Youth athlete performance training, education and mentorship in Santa Barbara, California.</p>
       </div>
       <div>
         <h4>Visit</h4>
@@ -200,7 +200,7 @@ def build_home():
   <img src="img/gym-squat-logo.jpg" alt="Athlete squatting in a Mission Performance shirt">
   <div class="wrap">
     <h1>Mission Performance SB</h1>
-    <p class="lede">Youth athlete strength and performance training, education and mentorship in Santa Barbara, California.</p>
+    <p class="lede">Youth athlete performance training, education and mentorship in Santa Barbara, California.</p>
     <div class="btn-row">
       <a class="btn" href="consult.html">Request a Consult</a>
       <a class="btn ghost" href="how-it-works.html">How It Works</a>
