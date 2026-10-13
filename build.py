@@ -274,7 +274,7 @@ def build_home():
 </section>
 {cta()}"""
     page("index.html", SITE_NAME,
-         "Strength and performance training for youth athletes in Santa Barbara, CA. Small groups, individualized programs and measured progress.",
+         "Performance training for youth athletes in Santa Barbara, CA. Small groups, individualized programs and measured progress.",
          body)
 
 
