@@ -79,16 +79,29 @@ document.querySelectorAll('form[data-web3]').forEach(function (f) {
     e.preventDefault();
     var s = f.querySelector('.form-status'), b = f.querySelector('button[type=submit]');
     b.disabled = true; s.className = 'form-status show'; s.textContent = 'Sending…';
-    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(f) })
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (!d.success) throw new Error(d.message);
+    var fd = new FormData(f), sends = [
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+        .then(function (r) { return r.json(); })
+        .then(function (d) { if (!d.success) throw new Error(d.message); })
+    ];
+    // Consult requests also land in the app; either one getting through counts.
+    if (f.hasAttribute('data-app')) {
+      var p = {};
+      fd.forEach(function (v, k) { if (k !== 'access_key' && k !== 'subject' && k !== 'from_name') p[k] = String(v); });
+      sends.push(fetch('https://hqcdormowlqewwbapllw.supabase.co/rest/v1/rpc/consult_request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxY2Rvcm1vd2xxZXd3YmFwbGx3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4Njc4NjIsImV4cCI6MjEwNzQ0Mzg2Mn0.vFySGmaSaS3-4nK8lItTzCeZc9pvuZDAk2hz1ckT4EI', Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxY2Rvcm1vd2xxZXd3YmFwbGx3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4Njc4NjIsImV4cCI6MjEwNzQ0Mzg2Mn0.vFySGmaSaS3-4nK8lItTzCeZc9pvuZDAk2hz1ckT4EI' },
+        body: JSON.stringify({ p: p })
+      }).then(function (r) { if (!r.ok) throw new Error(r.status); }));
+    }
+    Promise.allSettled(sends).then(function (res) {
+      if (res.some(function (x) { return x.status === 'fulfilled'; })) {
         s.className = 'form-status show ok'; s.textContent = f.dataset.ok; f.reset();
-      })
-      .catch(function () {
+      } else {
         s.textContent = 'Something went wrong. Please email jack@missionperformsb.com instead.';
-      })
-      .finally(function () { b.disabled = false; });
+      }
+      b.disabled = false;
+    });
   });
 });
 document.querySelectorAll('form[data-kit]').forEach(function (f) {

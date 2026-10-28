@@ -19,6 +19,9 @@ TESTING = False
 # Free form handler that emails submissions to jack@missionperformsb.com.
 # Get a key at https://web3forms.com (enter the email, the key arrives by email).
 WEB3FORMS_KEY = "e4a65e07-e08a-4df2-a0c6-ff1ba3f78b0d"
+# Consult requests also go into the Mission app (New athletes). Public anon key, same as the app ships.
+APP_URL = "https://hqcdormowlqewwbapllw.supabase.co"
+APP_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxY2Rvcm1vd2xxZXd3YmFwbGx3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4Njc4NjIsImV4cCI6MjEwNzQ0Mzg2Mn0.vFySGmaSaS3-4nK8lItTzCeZc9pvuZDAk2hz1ckT4EI"
 # Kit (kit.com) form that newsletter signups go into.
 KIT_FORM_ID = "9992033"
 
@@ -137,16 +140,29 @@ document.querySelectorAll('form[data-web3]').forEach(function (f) {{
     e.preventDefault();
     var s = f.querySelector('.form-status'), b = f.querySelector('button[type=submit]');
     b.disabled = true; s.className = 'form-status show'; s.textContent = 'Sending…';
-    fetch('https://api.web3forms.com/submit', {{ method: 'POST', body: new FormData(f) }})
-      .then(function (r) {{ return r.json(); }})
-      .then(function (d) {{
-        if (!d.success) throw new Error(d.message);
+    var fd = new FormData(f), sends = [
+      fetch('https://api.web3forms.com/submit', {{ method: 'POST', body: fd }})
+        .then(function (r) {{ return r.json(); }})
+        .then(function (d) {{ if (!d.success) throw new Error(d.message); }})
+    ];
+    // Consult requests also land in the app; either one getting through counts.
+    if (f.hasAttribute('data-app')) {{
+      var p = {{}};
+      fd.forEach(function (v, k) {{ if (k !== 'access_key' && k !== 'subject' && k !== 'from_name') p[k] = String(v); }});
+      sends.push(fetch('{APP_URL}/rest/v1/rpc/consult_request', {{
+        method: 'POST',
+        headers: {{ 'Content-Type': 'application/json', apikey: '{APP_KEY}', Authorization: 'Bearer {APP_KEY}' }},
+        body: JSON.stringify({{ p: p }})
+      }}).then(function (r) {{ if (!r.ok) throw new Error(r.status); }}));
+    }}
+    Promise.allSettled(sends).then(function (res) {{
+      if (res.some(function (x) {{ return x.status === 'fulfilled'; }})) {{
         s.className = 'form-status show ok'; s.textContent = f.dataset.ok; f.reset();
-      }})
-      .catch(function () {{
+      }} else {{
         s.textContent = 'Something went wrong. Please email {EMAIL} instead.';
-      }})
-      .finally(function () {{ b.disabled = false; }});
+      }}
+      b.disabled = false;
+    }});
   }});
 }});
 document.querySelectorAll('form[data-kit]').forEach(function (f) {{
@@ -504,7 +520,7 @@ def build_consult():
 </section>
 <section class="block">
   <div class="wrap narrow">
-    <form data-web3 data-ok="Thanks! Your request is in. Jack will reach out soon to set up a consultation.">
+    <form data-web3 data-app data-ok="Thanks! Your request is in. Jack will reach out soon to set up a consultation.">
       <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
       <input type="hidden" name="subject" value="New consult request from the website">
       <input type="hidden" name="from_name" value="Mission Performance website">
