@@ -239,10 +239,10 @@ def build_home():
       <h2>What training looks like</h2>
     </div>
     <div class="grid two">
-      <div class="card"><img src="img/gym-coaching-jump.jpg" alt="Coach cueing an athlete through a jump" loading="lazy"><div class="pad"><h3>Small groups</h3><p>Sessions run with 2–7 athletes. Athletes get the energy of a group with the attention of private training.</p></div></div>
-      <div class="card"><img src="img/gym-db-bench.jpg" alt="Athlete pressing dumbbells on a bench" loading="lazy"><div class="pad"><h3>Your own program</h3><p>Every athlete has a program built around their sport, season, history and goals, delivered straight to their phone.</p></div></div>
-      <div class="card"><img src="img/outdoor-timing-gates.jpg" alt="Athlete sprinting through timing gates" loading="lazy"><div class="pad"><h3>Measured progress</h3><p>Force plates, timing gates and regular testing show exactly where an athlete is improving and where they need work. No guessing.</p></div></div>
-      <div class="card"><img src="img/outdoor-demo.jpg" alt="Coach demonstrating a drill to a group of athletes" loading="lazy"><div class="pad"><h3>The whole athlete</h3><p>Sleep, nutrition, recovery and workload all matter as much as the weight room. From the daily fueling station to monthly educational speakers coming to speak to athletes — we cover all of it.</p></div></div>
+      <div class="card"><img src="img/gym-sled-push-card.jpg" alt="Athlete driving a loaded sled across the turf" loading="lazy"><div class="pad"><h3>Small groups</h3><p>Sessions run with 2–7 athletes. Athletes get the energy of a group with the attention of private training.</p></div></div>
+      <div class="card"><img src="img/gym-deadlift-logo.jpg" alt="Athlete locking out a trap bar deadlift in front of the logo wall" loading="lazy"><div class="pad"><h3>Your own program</h3><p>Every athlete has a program built around their sport, season, history and goals, delivered straight to their phone.</p></div></div>
+      <div class="card"><img src="img/gym-split-squat.jpg" alt="Athlete focused through a dumbbell split squat by the racks" loading="lazy"><div class="pad"><h3>Measured progress</h3><p>Force plates, timing gates and regular testing show exactly where an athlete is improving and where they need work. No guessing.</p></div></div>
+      <div class="card"><img src="img/whole-athlete-laugh.jpg" alt="Jack and an athlete sharing a laugh in the gym" loading="lazy"><div class="pad"><h3>The whole athlete</h3><p>Sleep, nutrition, recovery and workload all matter as much as the weight room. These habits are a strong focus at Mission.</p></div></div>
     </div>
   </div>
 </section>
@@ -256,20 +256,23 @@ def build_home():
         <p class="lede" style="margin-top:18px">We work with middle school, high school and college athletes in every sport, from baseball (our biggest group) to volleyball, soccer, basketball, football, lacrosse, tennis and more.</p>
         <p class="dim">The athletes who get the most out of Mission are the ones chasing something specific: making varsity, playing in college, staying healthy through a long season.</p>
       </div>
-      <img src="img/outdoor-sprint-yellow.jpg" alt="Athlete sprinting across the grass" loading="lazy">
+      <img src="img/gym-bound-timer-split.jpg" alt="Athlete mid-bound with the gym timer running behind him" loading="lazy">
     </div>
   </div>
 </section>
 
 <section class="block alt">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Results</p>
-      <h2>Where our athletes go</h2>
-      <p class="lede">Mission athletes are competing at programs across the country.</p>
+    <div class="split">
+      <img src="img/gym-athletes-logo-wall.jpg" alt="Two Mission athletes standing in front of the logo wall" style="aspect-ratio:4/5;object-position:center 30%" loading="lazy">
+      <div>
+        <p class="eyebrow">Results</p>
+        <h2>Where our athletes go</h2>
+        <p class="lede" style="margin-top:18px">Mission athletes are competing at programs across the country.</p>
+        <div class="schools">{school_tags}</div>
+        <div class="btn-row"><a class="btn ghost" href="athletes.html">See the full list</a></div>
+      </div>
     </div>
-    <div class="schools">{school_tags}</div>
-    <div class="btn-row"><a class="btn ghost" href="athletes.html">See the full list</a></div>
   </div>
 </section>
 
@@ -284,7 +287,12 @@ def build_home():
           {"".join(f'<div><h3>{d}</h3><p>{t}</p></div>' for d, t in HOURS)}
         </div>
       </div>
-      <img src="img/gym-overhead-press.jpg" alt="Athlete pressing a barbell overhead" loading="lazy">
+      <img src="img/facility-room.jpg" alt="The Mission Performance gym: turf and rubber floor side by side, racks along the right wall, logo on the back wall" loading="lazy">
+    </div>
+    <div class="grid three" style="margin-top:28px">
+      <img class="shot" src="img/facility-floor.jpg" alt="Turf lane and rack area" loading="lazy">
+      <img class="shot" src="img/facility-racks.jpg" alt="Squat racks by the front windows" loading="lazy">
+      <img class="shot" src="img/facility-shelves.jpg" alt="Wall shelves holding medicine balls, basketballs and training gear" loading="lazy">
     </div>
   </div>
 </section>
@@ -296,7 +304,8 @@ def build_home():
 
 def build_how():
     body = f"""
-<section class="page-hero">
+<section class="hero">
+  <img src="img/hero-how-bench.jpg" alt="Jack spotting an athlete on the bench press" style="object-position:center 30%">
   <div class="wrap">
     <p class="eyebrow">How It Works</p>
     <h1>The process</h1>
@@ -320,7 +329,7 @@ def build_how():
 <section class="block alt">
   <div class="wrap">
     <div class="split">
-      <img src="img/gym-coaching-sprint-start.jpg" alt="Coach watching an athlete drive out of a sprint start" loading="lazy">
+      <img src="img/gym-core-coach.jpg" alt="Jack holding an athlete's feet during a core exercise on the bench" loading="lazy">
       <div>
         <p class="eyebrow">In-Season</p>
         <h2>Training doesn't stop when the season starts</h2>
@@ -355,7 +364,6 @@ def build_how():
     <div class="section-head"><p class="eyebrow">Schedule</p><h2>When we train</h2></div>
     <div class="info">
       {"".join(f'<div><h3>{d}</h3><p>{t}</p></div>' for d, t in HOURS)}
-      <div><h3>Summer</h3><p>Group times shift to mornings and midday.</p></div>
       <div><h3>Location</h3><p>{ADDRESS}</p></div>
     </div>
   </div>
@@ -406,11 +414,14 @@ def build_about():
 <section class="block">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">What We Stand For</p><h2>Mission values</h2></div>
+    <div class="values-split">
+    <img class="values-photo" src="img/gym-pullup.jpg" alt="Athlete doing a pull-up on the rack" loading="lazy">
     <div class="grid two">
-      <div class="card"><div class="pad"><h3>Holistic Development</h3><p>Growing athletes physically, mentally, emotionally and socially, not just on the field.</p></div></div>
-      <div class="card"><div class="pad"><h3>Effort / Attitude</h3><p>The way athletes carry themselves matters. Show up ready to work every session, bring energy, compete with yourself and your teammates. These small habits build a greater potential for greatness.</p></div></div>
-      <div class="card"><div class="pad"><h3>Coachability</h3><p>The athlete-coach relationship is critical to success. The athletes who improve fastest are the ones most open to coaching. Listen, ask questions and apply feedback.</p></div></div>
-      <div class="card"><div class="pad"><h3>Ownership</h3><p>Athletes who take accountability of their own process are far more likely to succeed in sports and in life.</p></div></div></div>
+      <div class="card"><div class="pad"><h3>Holistic Development</h3><p>We develop athletes physically, mentally, emotionally and socially by building the everyday habits that drive performance. Only then will they be prepared to meet the demands of their sport and life.</p></div></div>
+      <div class="card"><div class="pad"><h3>Effort / Attitude</h3><p>The way athletes carry themselves matters. They show up ready to work every session, bring energy and compete. These small habits build a higher potential for greatness.</p></div></div>
+      <div class="card"><div class="pad"><h3>Coachability</h3><p>The athlete-coach relationship is critical to success. The athletes who improve fastest are the ones most open to communication. They possess a growth mindset and an ability to apply feedback effectively.</p></div></div>
+      <div class="card"><div class="pad"><h3>Ownership</h3><p>Athletes who take accountability for their own process are far more likely to excel. They own their preparation, their recovery and their mistakes, and they don’t wait for someone else to hold them to a high standard.</p></div></div>
+    </div>
     </div>
   </div>
 </section>
@@ -428,9 +439,8 @@ def build_athletes():
     body = f"""
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow">Results</p>
     <h1>Where our athletes go</h1>
-    <p class="lede">Mission athletes now competing in college, across every level and a range of sports.</p>
+    <p class="lede">Mission athletes now competing in college, across every level in a range of sports.</p>
   </div>
 </section>
 <section class="block">
@@ -469,8 +479,9 @@ def build_newsletter():
         for a in articles
     )
     body = f"""
-<section class="page-hero">
-  <div class="wrap narrow">
+<section class="hero">
+  <img src="../img/hero-news-plate.jpg" alt="Close-up of a Rogue plate loaded on a barbell" style="object-position:center 45%">
+  <div class="wrap">
     <p class="eyebrow">Newsletter</p>
     <h1>The Mission Newsletter</h1>
     <p class="lede">Practical advice on training, nutrition, sleep, recovery and recruiting for youth athletes and their parents.</p>
@@ -512,10 +523,13 @@ def build_consult():
                      ["6th", "7th", "8th", "9th", "10th", "11th", "12th", "College", "Other"])
     body = f"""
 <section class="page-hero">
-  <div class="wrap narrow">
-    <p class="eyebrow">Get Started</p>
-    <h1>Request a consult</h1>
-    <p class="lede">Every athlete starts with a consultation, athlete and parent together. Tell us a little about your athlete and Jack will reach out personally to find a time.</p>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Get Started</p>
+      <h1>Request a consult</h1>
+      <p class="lede">Every athlete starts with a consultation, athlete and parent together. Tell us a little about your athlete and Jack will reach out personally to find a time.</p>
+    </div>
+    <img src="img/gym-seated-logo.jpg" alt="Athlete sitting on the turf in front of the Mission Performance logo wall" class="hero-photo">
   </div>
 </section>
 <section class="block">
