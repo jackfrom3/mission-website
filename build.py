@@ -46,7 +46,6 @@ NAV = [
 # Ordered roughly biggest program first. Name + school + sport, no years.
 ATHLETES = [
     ("Quinn Melton", "Michigan", "Baseball"),
-    ("Emmett Mack", "USC", "Track & Field"),
     ("Sonia Mancuso", "Pepperdine", "Beach Volleyball"),
     ("Griffin Arnold", "Pepperdine", "Baseball"),
     ("Brooks Firestone", "Cal Poly", "Soccer"),
@@ -57,7 +56,24 @@ ATHLETES = [
     ("Bear Goodman", "Westmont", "Soccer"),
     ("Gizela Zermeno", "Westmont", "Soccer"),
     ("Parker Hellekson", "SBCC", "Baseball"),
+    ("Emmett Mack", "USC", "Track & Field"),  # bottom per Jack 11/9
 ]
+
+# College photos (img/alum-*.jpg, 4:5). Athletes with a photo show first; the rest get the logo panel.
+ATHLETE_PHOTOS = {
+    "Quinn Melton": "img/alum-quinn-melton.jpg",
+    "Brooks Firestone": "img/alum-brooks-firestone.jpg",
+    "Cason Goodman": "img/alum-cason-goodman.jpg",
+    "Logan Reed": "img/alum-logan-reed.jpg",
+    "Parker Hellekson": "img/alum-parker-hellekson.jpg",
+    "Griffin Arnold": "img/alum-griffin-arnold.jpg",
+    "Bear Goodman": "img/alum-bear-goodman.jpg",
+    "Sonia Mancuso": "img/alum-sonia-mancuso.jpg",
+    "Kelham Wolf": "img/alum-kelham-wolf.jpg",
+    "Gizela Zermeno": "img/alum-gizela-zermeno.jpg",
+    "Paddy Blinderman": "img/alum-paddy-blinderman.jpg",
+    "Emmett Mack": "img/alum-emmett-mack.jpg",
+}
 
 MENU_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
 
@@ -432,10 +448,14 @@ def build_about():
 
 
 def build_athletes():
-    cards = "".join(
-        f'<div class="athlete"><div class="school">{esc(s)}</div><div class="sport">{esc(sp)}</div><div class="name">{esc(n)}</div></div>'
-        for n, s, sp in ATHLETES
-    )
+    def card(n, s, sp):
+        src = ATHLETE_PHOTOS.get(n)
+        top = (f'<img class="photo" src="{src}" alt="{esc(n)}, {esc(s)} {esc(sp)}" loading="lazy">' if src
+               else '<div class="photo blank"><img src="img/logo.svg" alt=""></div>')
+        return (f'<div class="athlete">{top}<div class="pad"><div class="school">{esc(s)}</div>'
+                f'<div class="sport">{esc(sp)}</div><div class="name">{esc(n)}</div></div></div>')
+    ordered = [a for a in ATHLETES if a[0] in ATHLETE_PHOTOS] + [a for a in ATHLETES if a[0] not in ATHLETE_PHOTOS]
+    cards = "".join(card(*a) for a in ordered)
     body = f"""
 <section class="page-hero">
   <div class="wrap">
