@@ -256,7 +256,7 @@ def build_home():
     </div>
     <div class="grid two">
       <div class="card"><img src="img/gym-sled-push-card.jpg" alt="Athlete driving a loaded sled across the turf" loading="lazy"><div class="pad"><h3>Small groups</h3><p>Sessions run with 2–7 athletes. Athletes get the energy of a group with the attention of private training.</p></div></div>
-      <div class="card"><img src="img/gym-deadlift-logo.jpg" alt="Athlete locking out a trap bar deadlift in front of the logo wall" loading="lazy"><div class="pad"><h3>Your own program</h3><p>Every athlete has a program built around their sport, season, history and goals, delivered straight to their phone.</p></div></div>
+      <div class="card"><img src="img/gym-medball-logo.jpg" alt="Athlete throwing a medicine ball in front of the logo wall" loading="lazy"><div class="pad"><h3>Your own program</h3><p>Every athlete has a program built around their sport, season, history and goals, delivered straight to their phone.</p></div></div>
       <div class="card"><img src="img/gym-split-squat.jpg" alt="Athlete focused through a dumbbell split squat by the racks" loading="lazy"><div class="pad"><h3>Measured progress</h3><p>Force plates, timing gates and regular testing show exactly where an athlete is improving and where they need work. No guessing.</p></div></div>
       <div class="card"><img src="img/whole-athlete-laugh.jpg" alt="Jack and an athlete sharing a laugh in the gym" loading="lazy"><div class="pad"><h3>The whole athlete</h3><p>Sleep, nutrition, recovery and workload all matter as much as the weight room. These habits are a strong focus at Mission.</p></div></div>
     </div>
