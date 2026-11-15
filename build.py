@@ -345,7 +345,7 @@ def build_how():
 <section class="block alt">
   <div class="wrap">
     <div class="split">
-      <img src="img/gym-core-coach.jpg" alt="Jack holding an athlete's feet during a core exercise on the bench" loading="lazy">
+      <img src="img/gym-medball-baseball.jpg" alt="Athlete working with a medicine ball in front of the logo wall" loading="lazy">
       <div>
         <p class="eyebrow">In-Season</p>
         <h2>Training doesn't stop when the season starts</h2>
